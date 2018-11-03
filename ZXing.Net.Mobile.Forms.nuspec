@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>ZXing.Net.Mobile.Forms</id>
+        <id>ZXing.Net.Xamarin.Forms</id>
         <version>$version$</version>
         <title>ZXing.Net.Mobile Barcode Scanner for Xamarin.Forms</title>
         <authors>Redth</authors>

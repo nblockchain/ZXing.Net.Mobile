@@ -2,7 +2,7 @@
 
 ![ZXing.Net.Xamarin Logo](https://raw.github.com/nblockchain/ZXing.Net.Xamarin/master/zxing.net.mobile_128x128.png)
 
-ZXing.Net.Xamarin is a C#/.NET library based on the open source Barcode Library: [ZXing (Zebra Crossing)](https://github.com/zxing/zxing), using the [ZXing.Net Port](https://github.com/micjahn/ZXing.Net).  It works with Xamarin.iOS, Xamarin.Android, and Windows Phone.  The goal of ZXing.Net.Xamarin is to make scanning barcodes as effortless and painless as possible in your own applications.  The new iOS7 AVCaptureSession barcode scanning is now also supported!
+ZXing.Net.Xamarin is a C#/.NET library based on the open source Barcode Library: [ZXing (Zebra Crossing)](https://github.com/zxing/zxing), using the [ZXing.Net Port](https://github.com/micjahn/ZXing.Net).  It works with Xamarin.iOS, Xamarin.Android, Xamarin.Mac, and Windows Phone.  The goal of ZXing.Net.Xamarin is to make scanning barcodes as effortless and painless as possible in your own applications.  The new iOS7 AVCaptureSession barcode scanning is now also supported!
 
 [![AzureDevOps CI status](https://dev.azure.com/diginex/ZXing.Net.Xamarin/_apis/build/status/ZXing.Net.Xamarin-CI)](https://dev.azure.com/diginex/ZXing.Net.Xamarin/_build/latest?definitionId=1)
 [![NuGet](https://img.shields.io/nuget/v/ZXing.Net.Xamarin.svg)](https://www.nuget.org/packages/ZXing.Net.Xamarin/)
@@ -65,6 +65,15 @@ ZXing.Net.Mobile.Forms.iOS.Platform.Init();
 ```
 
 
+##### macOS
+
+In your `AppDelegate`'s `DidFinishedLaunching (..)` implementation, call:
+
+```csharp
+ZXing.Net.Mobile.Forms.macOS.Platform.Init();
+```
+
+
 ##### Windows Phone
 In your main `Page`'s constructor, you should add:
 
@@ -85,12 +94,13 @@ If you notice that finishing scanning or pressing the back button is causing you
 
 ### Features
 - Xamarin.iOS
+- Xamarin.Mac (rendering only, not scanning)
 - Xamarin.Android (Including Google Glass)
 - Windows Phone 8
 - Simple API - Scan in as little as 2 lines of code!
 - Scanner as a View - UIView (iOS) / Fragment (Android) / Control (WP)
 
-   
+
 ### Android Versions
 The component should work on Android 2.2 or higher.  In Xamarin.Android there are 3 places in the project settings relating to Android version.  YOU ***MUST*** set the Project Options -> Build -> General -> Target Framework to ***2.3*** or higher.  If you still want to use 2.2, you can set the Project Options -> Build -> Android Application -> Minimum Android version to 2.2, but be sure to set the Target Android version in this section to 2.3 or higher.
 

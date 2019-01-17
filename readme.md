@@ -2,7 +2,7 @@
 
 ![ZXing.Net.Xamarin Logo](https://raw.github.com/nblockchain/ZXing.Net.Xamarin/master/zxing.net.mobile_128x128.png)
 
-ZXing.Net.Xamarin is a C#/.NET library based on the open source Barcode Library: [ZXing (Zebra Crossing)](https://github.com/zxing/zxing), using the [ZXing.Net Port](https://github.com/micjahn/ZXing.Net).  It works with Xamarin.iOS, Xamarin.Android, Xamarin.Mac, and Windows Phone.  The goal of ZXing.Net.Xamarin is to make scanning barcodes as effortless and painless as possible in your own applications.  The new iOS7 AVCaptureSession barcode scanning is now also supported!
+ZXing.Net.Xamarin is a C#/.NET library based on the open source Barcode Library: [ZXing (Zebra Crossing)](https://github.com/zxing/zxing), using the [ZXing.Net Port](https://github.com/micjahn/ZXing.Net).  It works with Xamarin.iOS, Xamarin.Android, Xamarin.Mac, GTK# and Windows Phone.  The goal of ZXing.Net.Xamarin is to make scanning barcodes as effortless and painless as possible in your own applications.  The new iOS7 AVCaptureSession barcode scanning is now also supported!
 
 [![AzureDevOps CI status](https://dev.azure.com/diginex/ZXing.Net.Xamarin/_apis/build/status/ZXing.Net.Xamarin-CI)](https://dev.azure.com/diginex/ZXing.Net.Xamarin/_build/latest?definitionId=1)
 [![NuGet](https://img.shields.io/nuget/v/ZXing.Net.Xamarin.svg)](https://www.nuget.org/packages/ZXing.Net.Xamarin/)
@@ -64,6 +64,14 @@ In your `AppDelegate`'s `FinishedLaunching (..)` implementation, call:
 ZXing.Net.Mobile.Forms.iOS.Platform.Init();
 ```
 
+##### GTK#
+
+In your `MainClass`'s `Main (..)` implementation, call:
+
+```csharp
+ZXing.Net.Mobile.Forms.GTK.Platform.Init();
+```
+
 
 ##### macOS
 
@@ -96,6 +104,7 @@ If you notice that finishing scanning or pressing the back button is causing you
 - Xamarin.iOS
 - Xamarin.Mac (rendering only, not scanning)
 - Xamarin.Android (Including Google Glass)
+- GTK# (rendering only, not scanning)
 - Windows Phone 8
 - Simple API - Scan in as little as 2 lines of code!
 - Scanner as a View - UIView (iOS) / Fragment (Android) / Control (WP)

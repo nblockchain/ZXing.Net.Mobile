@@ -19,6 +19,10 @@
 
             <group targetFramework="net">
             </group>
+            <group targetFramework="net45">
+                <dependency id="ZXing.Net.Xamarin" version="$version$" />
+                <dependency id="Xamarin.Forms" version="3.0.0.446417" />
+            </group>
             <group targetFramework="win">
             </group>
             <group targetFramework="wp">
@@ -28,11 +32,11 @@
             <group targetFramework="netstandard1.0">
                 <dependency id="NETStandard.Library" version="1.6.1" />
                 <dependency id="ZXing.Net.Xamarin" version="$version$" />
-                <dependency id="Xamarin.Forms" version="2.5.0.122203" />
+                <dependency id="Xamarin.Forms" version="3.0.0.446417" />
             </group>
             <group targetFramework="netstandard2.0">
                 <dependency id="ZXing.Net.Xamarin" version="$version$" />
-                <dependency id="Xamarin.Forms" version="2.5.0.122203" />
+                <dependency id="Xamarin.Forms" version="3.0.0.446417" />
             </group>
             <group targetFramework="MonoAndroid10">
                 <dependency id="Xamarin.Android.Support.v4" version="25.4.0.2" />
@@ -40,19 +44,19 @@
             </group>
             <group targetFramework="Xamarin.iOS10">
                 <dependency id="ZXing.Net.Xamarin" version="$version$" />
-                <dependency id="Xamarin.Forms" version="2.5.0.122203" />
+                <dependency id="Xamarin.Forms" version="3.0.0.446417" />
             </group>
             <group targetFramework="Xamarin.Mac20">
                 <dependency id="ZXing.Net.Xamarin" version="$version$" />
-                <dependency id="Xamarin.Forms" version="2.5.0.122203" />
+                <dependency id="Xamarin.Forms" version="3.0.0.446417" />
             </group>
             <group targetFramework="portable-net45+win+wpa81+wp80">
                 <dependency id="ZXing.Net.Xamarin" version="$version$" />
-                <dependency id="Xamarin.Forms" version="2.5.0.122203" />
+                <dependency id="Xamarin.Forms" version="3.0.0.446417" />
             </group>
             <group targetFramework="uap">
                 <dependency id="ZXing.Net.Xamarin" version="$version$" />
-                <dependency id="Xamarin.Forms" version="2.5.0.122203" />
+                <dependency id="Xamarin.Forms" version="3.0.0.446417" />
             </group>
             <group targetFramework="dotnet">
             </group>
@@ -71,6 +75,10 @@
         <file src="Build/Forms/Release/ios-unified/ZXing.Net.Mobile.Forms.dll" target="lib\Xamarin.iOS10\ZXing.Net.Mobile.Forms.dll" />
         <file src="Build/Forms/Release/ios-unified/ZXing.Net.Mobile.Forms.iOS.dll" target="lib\Xamarin.iOS10\ZXing.Net.Mobile.Forms.iOS.dll" />
 
+        <!-- GTK -->
+        <file src="Build/Forms/Release/xamgtk/ZXing.Net.Mobile.Forms.dll" target="lib\net45\ZXing.Net.Mobile.Forms.dll" />
+        <file src="Build/Forms/Release/xamgtk/ZXing.Net.Mobile.Forms.GTK.dll" target="lib\net45\ZXing.Net.Mobile.Forms.GTK.dll" />
+      
         <!-- Xamarin.Mac API -->
         <file src="Build/Forms/Release/xammac/ZXing.Net.Mobile.Forms.dll" target="lib\Xamarin.Mac\ZXing.Net.Mobile.Forms.dll" />
         <file src="Build/Forms/Release/xammac/ZXing.Net.Mobile.Forms.macOS.dll" target="lib\Xamarin.Mac\ZXing.Net.Mobile.Forms.macOS.dll" />

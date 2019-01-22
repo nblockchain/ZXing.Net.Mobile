@@ -1,19 +1,15 @@
-# ZXing.Net.Mobile
+# ZXing.Net.Xamarin
 
-[![Join the chat at https://gitter.im/Redth/ZXing.Net.Mobile](https://badges.gitter.im/Redth/ZXing.Net.Mobile.svg)](https://gitter.im/Redth/ZXing.Net.Mobile?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+![ZXing.Net.Xamarin Logo](https://raw.github.com/nblockchain/ZXing.Net.Xamarin/master/zxing.net.mobile_128x128.png)
 
-![ZXing.Net.Mobile Logo](https://raw.github.com/Redth/ZXing.Net.Mobile/master/zxing.net.mobile_128x128.png)
+ZXing.Net.Xamarin is a C#/.NET library based on the open source Barcode Library: [ZXing (Zebra Crossing)](https://github.com/zxing/zxing), using the [ZXing.Net Port](https://github.com/micjahn/ZXing.Net).  It works with Xamarin.iOS, Xamarin.Android, Xamarin.Mac, GTK# and Windows Phone.  The goal of ZXing.Net.Xamarin is to make scanning barcodes as effortless and painless as possible in your own applications.  The new iOS7 AVCaptureSession barcode scanning is now also supported!
 
-
-ZXing.Net.Mobile is a C#/.NET library based on the open source Barcode Library: [ZXing (Zebra Crossing)](https://github.com/zxing/zxing), using the [ZXing.Net Port](https://github.com/micjahn/ZXing.Net).  It works with Xamarin.iOS, Xamarin.Android, Xamarin.Mac, GTK# and Windows Phone.  The goal of ZXing.Net.Mobile is to make scanning barcodes as effortless and painless as possible in your own applications.  The new iOS7 AVCaptureSession barcode scanning is now also supported!
-
-![AppVeyor CI Status](https://ci.appveyor.com/api/projects/status/github/Redth/ZXing.Net.Mobile?branch=master&svg=true)
-[![Bitrise CI Status](https://www.bitrise.io/app/379eeea5b638f470.svg?token=jEVeMXcISnOVDlVxcxl9Lg&branch=master)](https://www.bitrise.io/app/379eeea5b638f470)
-[![NuGet](https://img.shields.io/nuget/v/ZXing.Net.Mobile.svg)](https://www.nuget.org/packages/ZXing.Net.Mobile/)
-[![NuGet](https://img.shields.io/nuget/dt/ZXing.Net.Mobile.svg)](https://www.nuget.org/packages/ZXing.Net.Mobile/)
+[![AzureDevOps CI status](https://dev.azure.com/diginex/ZXing.Net.Xamarin/_apis/build/status/ZXing.Net.Xamarin-CI)](https://dev.azure.com/diginex/ZXing.Net.Xamarin/_build/latest?definitionId=1)
+[![NuGet](https://img.shields.io/nuget/v/ZXing.Net.Xamarin.svg)](https://www.nuget.org/packages/ZXing.Net.Xamarin/)
+[![NuGet](https://img.shields.io/nuget/dt/ZXing.Net.Xamarin.svg)](https://www.nuget.org/packages/ZXing.Net.Xamarin/)
 
 ### Usage
-The simplest example of using ZXing.Net.Mobile looks something like this:
+The simplest example of using ZXing.Net.Xamarin looks something like this:
 
 ```csharp  
 buttonScan.Click += (sender, e) => {
@@ -120,9 +116,6 @@ If you notice that finishing scanning or pressing the back button is causing you
 - Simple API - Scan in as little as 2 lines of code!
 - Scanner as a View - UIView (iOS) / Fragment (Android) / Control (WP)
 
-### Changes
-See [CHANGES.md](https://github.com/Redth/ZXing.Net.Mobile/blob/master/CHANGES.md) for changelog
-
    
 ### Android Versions
 The component should work on Android 2.2 or higher.  In Xamarin.Android there are 3 places in the project settings relating to Android version.  YOU ***MUST*** set the Project Options -> Build -> General -> Target Framework to ***2.3*** or higher.  If you still want to use 2.2, you can set the Project Options -> Build -> Android Application -> Minimum Android version to 2.2, but be sure to set the Target Android version in this section to 2.3 or higher.
@@ -202,19 +195,24 @@ In the MobileBarcodeScanner, even if you specify to use the AVCaptureSession sca
 
 
 ### Thanks
-ZXing.Net.Mobile is a combination of a lot of peoples' work that I've put together (including my own).  So naturally, I'd like to thank everyone who's helped out in any way.  Those of you I know have helped I'm listing here, but anyone else that was involved, please let me know!
+ZXing.Net.Xamarin is a combination of a lot of peoples' work.
 
 - ZXing Project and those responsible for porting it to C#
 - John Carruthers - https://github.com/JohnACarruthers/zxing.MonoTouch
 - Martin Bowling - https://github.com/martinbowling
 - Alex Corrado - https://github.com/chkn/zxing.MonoTouch
 - ZXing.Net Project - https://github.com/micjahn/ZXing.Net - HUGE effort here to port ZXing to .NET
-
+- ZXing.Net.Mobile Project - https://github.com/redth/ZXing.Net.Mobile
 
 
 ### License
 Apache ZXing.Net.Mobile Copyright 2012 The Apache Software Foundation
 This product includes software developed at The Apache Software Foundation (http://www.apache.org/).
+
+### ZXing.Net.Mobile
+ZXing.Net.Mobile is released under the Apache 2.0 license.
+ZXing.Net.Mobile can be found here: https://github.com/redth/ZXing.Net.Mobile
+A copy of the Apache 2.0 license can be found here: https://github.com/redth/ZXing.Net.Mobile/blob/master/LICENSE.txt
 
 ### ZXing.Net
 ZXing.Net is released under the Apache 2.0 license.

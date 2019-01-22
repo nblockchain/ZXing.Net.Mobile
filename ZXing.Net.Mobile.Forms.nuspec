@@ -1,18 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>ZXing.Net.Mobile.Forms</id>
+        <id>ZXing.Net.Xamarin.Forms</id>
         <version>$version$</version>
-        <title>ZXing.Net.Mobile Barcode Scanner for Xamarin.Forms</title>
+        <title>ZXing.Net.Xamarin Barcode Scanner for Xamarin.Forms</title>
         <authors>Redth</authors>
-        <licenseUrl>http://raw.github.com/Redth/ZXing.Net.Mobile/master/License.md</licenseUrl>
-        <projectUrl>http://github.com/Redth/ZXing.Net.Mobile</projectUrl>
-        <iconUrl>http://raw.github.com/Redth/ZXing.Net.Mobile/master/Art/ZXing.Net.Mobile-Icon.png</iconUrl>
+        <licenseUrl>http://raw.github.com/nblockchain/ZXing.Net.Xamarin/master/License.md</licenseUrl>
+        <projectUrl>http://github.com/nblockchain/ZXing.Net.Xamarin</projectUrl>
+        <iconUrl>http://raw.github.com/nblockchain/ZXing.Net.Xamarin/master/Art/ZXing.Net.Mobile-Icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>
-            ZXing.Net.Mobile is a C#/.NET library based on the open source Barcode Library: ZXing (Zebra Crossing), using the ZXing.Net Port. It works with Xamarin.iOS, Xamarin.Android, Windows Phone (Silverlight), and Windows Universal. The goal of ZXing.Net.Mobile is to make scanning barcodes as effortless and painless as possible in your own applications.
-
-            See https://github.com/Redth/ZXing.Net.Mobile/releases for release notes.
+            ZXing.Net.Xamarin is a C#/.NET library based on the open source Barcode Library: ZXing (Zebra Crossing), using the ZXing.Net Port. It works with Xamarin.iOS, Xamarin.Android, Windows Phone (Silverlight), and Windows Universal. The goal of this library is to make scanning barcodes as effortless and painless as possible in your own applications.
         </description>
         <summary>ZXing Barcode Scanning for your Xamarin.iOS, Xamarin.Android, Windows Phone (Silverlight), and Windows Universal apps!</summary>
         <copyright />
@@ -22,7 +20,7 @@
             <group targetFramework="net">
             </group>
             <group targetFramework="net45">
-                <dependency id="ZXing.Net.Mobile" version="$version$" />
+                <dependency id="ZXing.Net.Xamarin" version="$version$" />
                 <dependency id="Xamarin.Forms" version="3.0.0.446417" />
             </group>
             <group targetFramework="win">
@@ -33,20 +31,20 @@
             </group>
             <group targetFramework="netstandard1.0">
                 <dependency id="NETStandard.Library" version="1.6.1" />
-                <dependency id="ZXing.Net.Mobile" version="$version$" />
+                <dependency id="ZXing.Net.Xamarin" version="$version$" />
                 <dependency id="Xamarin.Forms" version="3.0.0.446417" />
             </group>
             <group targetFramework="netstandard2.0">
-                <dependency id="ZXing.Net.Mobile" version="$version$" />
+                <dependency id="ZXing.Net.Xamarin" version="$version$" />
                 <dependency id="Xamarin.Forms" version="3.0.0.446417" />
             </group>
             <group targetFramework="MonoAndroid10">
-                <dependency id="ZXing.Net.Mobile" version="$version$" />
+                <dependency id="ZXing.Net.Xamarin" version="$version$" />
                 <dependency id="Xamarin.Android.Support.v4" version="25.4.0.2" />
                 <dependency id="FastAndroidCamera" version="2.0.0" />
             </group>
             <group targetFramework="Xamarin.iOS10">
-                <dependency id="ZXing.Net.Mobile" version="$version$" />
+                <dependency id="ZXing.Net.Xamarin" version="$version$" />
                 <dependency id="Xamarin.Forms" version="3.0.0.446417" />
             </group>
             <group targetFramework="Xamarin.Mac20">
@@ -54,11 +52,11 @@
                 <dependency id="Xamarin.Forms" version="3.0.0.446417" />
             </group>
             <group targetFramework="portable-net45+win+wpa81+wp80">
-                <dependency id="ZXing.Net.Mobile" version="$version$" />
+                <dependency id="ZXing.Net.Xamarin" version="$version$" />
                 <dependency id="Xamarin.Forms" version="3.0.0.446417" />
             </group>
             <group targetFramework="uap">
-                <dependency id="ZXing.Net.Mobile" version="$version$" />
+                <dependency id="ZXing.Net.Xamarin" version="$version$" />
                 <dependency id="Xamarin.Forms" version="3.0.0.446417" />
             </group>
             <group targetFramework="dotnet">

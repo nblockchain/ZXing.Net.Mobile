@@ -1,4 +1,5 @@
 #tool nuget:?package=XamarinComponent
+#tool nuget:?package=vswhere
 
 #addin nuget:?package=Cake.Android.SdkManager
 #addin nuget:?package=Cake.XCode
@@ -41,9 +42,20 @@ Task("libs")
 	NuGetRestore("./ZXing.Net.Mobile.sln");
 	NuGetRestore("./ZXing.Net.Mobile.Forms.sln");
 
+	DirectoryPath vsLatest = VSWhereLatest();
+	string msbuildExeRelativePath = "./MSBuild/Current/Bin/MSBuild.exe";
+	FilePath msbuildPathFromVS = (vsLatest == null) ? null : vsLatest.CombineWithFilePath(msbuildExeRelativePath); 
+
 	var config = IsRunningOnWindows() ? "ReleaseWin" : "ReleaseMac";
-	MSBuild ("./ZXing.Net.Mobile.sln", c => c.SetConfiguration(config).SetMSBuildPlatform(MSBuildPlatform.x86));
-	MSBuild ("./ZXing.Net.Mobile.Forms.sln", c => c.SetConfiguration(config).SetMSBuildPlatform(MSBuildPlatform.x86));
+
+	var msbuildSettings = new MSBuildSettings {
+		Configuration = config,
+		MSBuildPlatform = MSBuildPlatform.x86,
+		ToolPath = msbuildPathFromVS,
+	};
+
+	MSBuild ("./ZXing.Net.Mobile.sln", msbuildSettings);
+	MSBuild ("./ZXing.Net.Mobile.Forms.sln", msbuildSettings);
 });
 
 Task ("samples")

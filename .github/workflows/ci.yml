@@ -11,6 +11,10 @@ jobs:
       run: |
         SET
 
+    - name: dir
+      run: |
+        c: && cd \ && dir /s Microsoft.Windows.UI.Xaml.CSharp.targets
+
     - name: install boots
       shell: pwsh
       run: |

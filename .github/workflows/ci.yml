@@ -11,9 +11,10 @@ jobs:
       run: |
         SET
 
-    - name: dir
+    - name: find
+      shell: bash
       run: |
-        c: && cd \ && dir /s Microsoft.Windows.UI.Xaml.CSharp.targets
+        find /c/ -name "Microsoft.Windows.UI.Xaml.CSharp.targets"
 
     - name: install boots
       shell: pwsh

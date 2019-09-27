@@ -7,14 +7,13 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
+    - name: choco-win10-sdk
+      run: |
+        choco install windows-sdk-10.1
+
     - name: list env vars
       run: |
         SET
-
-    - name: find
-      shell: bash
-      run: |
-        find /c/ -name "Microsoft.Windows.UI.Xaml.CSharp.targets"
 
     - name: install boots
       shell: pwsh

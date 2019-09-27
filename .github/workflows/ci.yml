@@ -9,7 +9,7 @@ jobs:
 
     - name: choco-win10-sdk
       run: |
-        choco install visualstudio2019-workload-universal
+        choco install visualstudio2019-workload-universal --includeOptional
 
     - name: list env vars
       run: |

@@ -6,6 +6,11 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
+
+    - name: list env vars
+      run: |
+        SET
+
     - name: install boots
       shell: pwsh
       run: |

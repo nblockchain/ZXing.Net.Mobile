@@ -42,8 +42,10 @@ Task("libs")
 	NuGetRestore("./ZXing.Net.Mobile.Forms.sln");
 
 	var config = IsRunningOnWindows() ? "ReleaseWin" : "ReleaseMac";
-	MSBuild ("./ZXing.Net.Mobile.sln", c => c.SetConfiguration(config).SetMSBuildPlatform(MSBuildPlatform.x86));
-	MSBuild ("./ZXing.Net.Mobile.Forms.sln", c => c.SetConfiguration(config).SetMSBuildPlatform(MSBuildPlatform.x86));
+	MSBuild ("./ZXing.Net.Mobile.sln", c => c.SetConfiguration(config).SetMSBuildPlatform(MSBuildPlatform.x86)
+							.SetVerbosity(Verbosity.Diagnostic));
+	MSBuild ("./ZXing.Net.Mobile.Forms.sln", c => c.SetConfiguration(config).SetMSBuildPlatform(MSBuildPlatform.x86)
+							.SetVerbosity(Verbosity.Diagnostic));
 });
 
 Task ("samples")

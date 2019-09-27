@@ -9,7 +9,7 @@ jobs:
 
     - name: choco-win10-sdk
       run: |
-        choco install windows-sdk-10.1
+        choco install windows-sdk-10.1 || type C:\ProgramData\chocolatey\logs\chocolatey.log
 
     - name: list env vars
       run: |

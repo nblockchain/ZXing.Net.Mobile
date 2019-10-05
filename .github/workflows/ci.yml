@@ -6,26 +6,11 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
-
-    - run: find /c/ -name "Microsoft.Windows.UI.Xaml.CSharp.targets"
-
-    - name: choco-win10-sdk
-      run: |
-        choco install visualstudio2019-workload-universal --package-parameters "--includeOptional"
-        choco install visualstudio2019-workload-universalbuildtools
-
-    - name: list env vars
-      run: |
-        SET
-
-    - name: install boots
-      shell: pwsh
-      run: |
-        dotnet tool install --global boots
-        boots https://aka.ms/xamarin-android-commercial-d16-3-windows
     - name: Clone submodules
       run: |
         git submodule update --init --recursive
+    - name: VS workload install
+      run: configure.bat
     - name: Build
       shell: pwsh
       run: |

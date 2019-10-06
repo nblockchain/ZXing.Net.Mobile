@@ -42,22 +42,22 @@ Task("libs")
 	NuGetRestore("./ZXing.Net.Mobile.sln");
 	NuGetRestore("./ZXing.Net.Mobile.Forms.sln");
 
-        DirectoryPath vsLatest = VSWhereLatest();
-        FilePath msBuildPathFromVS = (vsLatest==null) ? null : vsLatest.CombineWithFilePath("./MSBuild/Current/Bin/MSBuild.exe"); 
+	DirectoryPath vsLatest = VSWhereLatest();
+	FilePath msBuildPathFromVS = (vsLatest==null) ? null : vsLatest.CombineWithFilePath("./MSBuild/Current/Bin/MSBuild.exe"); 
 
 	var config = IsRunningOnWindows() ? "ReleaseWin" : "ReleaseMac";
 	MSBuild ("./ZXing.Net.Mobile.sln", new MSBuildSettings {
-                                                     ToolPath = msBuildPathFromVS,
-                                                     Configuration = config,
-                                                     MSBuildPlatform = MSBuildPlatform.x86,
-                                                     Verbosity = Verbosity.Diagnostic
-                                                 });
+							Configuration = config,
+							MSBuildPlatform = MSBuildPlatform.x86,
+							ToolPath = msBuildPathFromVS,
+							Verbosity = Verbosity.Diagnostic,
+	});
 	MSBuild ("./ZXing.Net.Mobile.Forms.sln", new MSBuildSettings {
-                                                     ToolPath = msBuildPathFromVS,
-                                                     Configuration = config,
-                                                     MSBuildPlatform = MSBuildPlatform.x86,
-                                                     Verbosity = Verbosity.Diagnostic
-                                                 });
+							Configuration = config,
+							MSBuildPlatform = MSBuildPlatform.x86,
+							ToolPath = msBuildPathFromVS,
+							Verbosity = Verbosity.Diagnostic,
+	});
 });
 
 Task ("samples")

@@ -9,8 +9,6 @@ jobs:
     - name: Clone submodules
       run: |
         git submodule update --init --recursive
-    - name: VS workload install
-      run: configure.bat
     - name: Build
       shell: pwsh
       run: |

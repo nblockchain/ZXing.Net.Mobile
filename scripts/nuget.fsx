@@ -67,5 +67,5 @@ let PackAndMaybeUpload (packageName: string) =
             Process.SafeExecute (nugetPushCmd, Echo.All) |> ignore
 
 
-PackaAndMaybeUpload "ZXing.Net.Xamarin"
-PackaAndMaybeUpload "ZXing.Net.Xamarin.Forms"
+PackAndMaybeUpload "ZXing.Net.Xamarin"
+PackAndMaybeUpload "ZXing.Net.Xamarin.Forms"

@@ -48,8 +48,12 @@ Task("libs")
 	var config = IsRunningOnWindows() ? "ReleaseWin" : "ReleaseMac";
 	MSBuild ("./ZXing.Net.Mobile.sln", c => { c.SetConfiguration(config).SetMSBuildPlatform(MSBuildPlatform.x86)
 							.SetVerbosity(Verbosity.Diagnostic); c.ToolPath = msBuildPathFromVS;});
-	MSBuild ("./ZXing.Net.Mobile.Forms.sln", c => c.SetConfiguration(config).SetMSBuildPlatform(MSBuildPlatform.x86)
-							.SetVerbosity(Verbosity.Diagnostic));
+	MSBuild ("./ZXing.Net.Mobile.Forms.sln", new MSBuildSettings {
+                                                     ToolPath = msBuildPathFromVS,
+                                                     Configuration = config,
+                                                     MSBuildPlatform = MSBuildPlatform.x86,
+                                                     Verbosity = Verbosity.Diagnostic
+                                                 });
 });
 
 Task ("samples")

@@ -4,15 +4,15 @@
 		<TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TargetFrameworks);uap10.0.16299;</TargetFrameworks>
 		<AssemblyName>ZXingNetMobile</AssemblyName>
 		<RootNamespace>ZXing.Net.Mobile</RootNamespace>
-		<PackageId>ZXing.Net.Mobile</PackageId>
+		<PackageId>ZXing.Net.Xamarin</PackageId>
 		<PackageIcon>icon.png</PackageIcon>
 		<Summary>ZXing Barcode Scanning for your Xamarin.iOS, Xamarin.Android and Windows Universal apps!</Summary>
 		<PackageTags></PackageTags>
-		<Title>ZXing.Net.Mobile Barcode Scanner</Title>
+		<Title>ZXing.Net.Xamarin Barcode Scanner</Title>
 		<Description>
-			ZXing.Net.Mobile is a C#/.NET library based on the open source Barcode Library: ZXing (Zebra Crossing), using the ZXing.Net Port. It works with Xamarin.iOS, Xamarin.Android, Tizen and Windows Universal (UWP). The goal of ZXing.Net.Mobile is to make scanning barcodes as effortless and painless as possible in your own applications.
+			ZXing.Net.Xamarin is a C#/.NET library based on the open source Barcode Library: ZXing (Zebra Crossing), using the ZXing.Net Port. It works with Xamarin.iOS, Xamarin.Android, Tizen and Windows Universal (UWP). The goal of ZXing.Net.Xamarin is to make scanning barcodes as effortless and painless as possible in your own applications.
 
-			See https://github.com/Redth/ZXing.Net.Mobile/releases for release notes.
+			See https://github.com/nblockchain/ZXing.Net.Xamarin .
 		</Description>
 		<Product>$(AssemblyName) ($(TargetFramework))</Product>
 		<AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -23,13 +23,13 @@
 		<Owners>Redth</Owners>
 		<NeutralLanguage>en</NeutralLanguage>
 		<Copyright>© Redth</Copyright>
-		<RepositoryUrl>https://github.com/redth/ZXing.Net.Mobile</RepositoryUrl>
-		<PackageReleaseNotes>See: https://github.com/Redth/ZXing.Net.Mobile/releases</PackageReleaseNotes>
+		<RepositoryUrl>https://github.com/nblockchain/ZXing.Net.Xamarin</RepositoryUrl>
+		<PackageReleaseNotes>See: https://github.com/nblockchain/ZXing.Net.Xamarin</PackageReleaseNotes>
 		<DefineConstants>$(DefineConstants);</DefineConstants>
 		<UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
 		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageProjectUrl>http://github.com/Redth/ZXing.Net.Mobile</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/nblockchain/ZXing.Net.Xamarin</PackageProjectUrl>
 		<DebugType>portable</DebugType>
 		<Configurations>Debug;Release</Configurations>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>

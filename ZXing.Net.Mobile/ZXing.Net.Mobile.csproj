@@ -1,6 +1,6 @@
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;Xamarin.iOS10;Xamarin.Mac20;MonoAndroid90;MonoAndroid10.0;tizen40</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;Xamarin.iOS10;Xamarin.Mac20;MonoAndroid90;MonoAndroid10.0;tizen40;net461</TargetFrameworks>
 		<TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TargetFrameworks);uap10.0.16299;</TargetFrameworks>
 		<AssemblyName>ZXingNetMobile</AssemblyName>
 		<RootNamespace>ZXing.Net.Mobile</RootNamespace>
@@ -111,8 +111,21 @@
 		<Compile Include="**\*.tizen.cs" />
 		<Compile Include="**\*.tizen.*.cs" />
 	</ItemGroup>
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('net461')) ">
+		<Reference Include="gtk-sharp">
+		  <HintPath>GTK\Libs\gtk-sharp\gtk-sharp-2.0\gtk-sharp.dll</HintPath>
+		</Reference>
+		<Reference Include="gdk-sharp">
+		  <HintPath>GTK\Libs\gtk-sharp\gtk-sharp-2.0\gdk-sharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Mono.Cairo">
+		  <HintPath>GTK\Libs\gtk-sharp\Mono.Cairo\Mono.Cairo.dll</HintPath>
+		</Reference>
+		<Compile Include="**\*.gtk.cs" />
+		<Compile Include="**\*.gtk.*.cs" />
+	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
+		<PackageReference Include="DotNetEssentials" Version="1.5.9999--date20200916-1021.git-1e3232b" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="zxing">
@@ -121,6 +134,7 @@
 		<None Include="..\ZXing.Net\zxing.dll" Pack="True" PackagePath="lib\monoandroid10.0" />
 		<None Include="..\ZXing.Net\zxing.dll" Pack="True" PackagePath="lib\monoandroid90" />
 		<None Include="..\ZXing.Net\zxing.dll" Pack="True" PackagePath="lib\netstandard2.0" />
+		<None Include="..\ZXing.Net\zxing.dll" Pack="True" PackagePath="lib\net461" />
 		<None Include="..\ZXing.Net\zxing.dll" Pack="True" PackagePath="lib\tizen40" />
 		<None Include="..\ZXing.Net\zxing.dll" Pack="True" PackagePath="lib\uap10.0.16299" />
 		<None Include="..\ZXing.Net\zxing.dll" Pack="True" PackagePath="lib\xamarinios10" />

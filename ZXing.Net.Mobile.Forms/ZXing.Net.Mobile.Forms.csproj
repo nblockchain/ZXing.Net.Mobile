@@ -1,6 +1,6 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;Xamarin.iOS10;Xamarin.Mac20;MonoAndroid90;MonoAndroid10.0;tizen40</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;Xamarin.iOS10;Xamarin.Mac20;MonoAndroid90;MonoAndroid10.0;tizen40;net461</TargetFrameworks>
 		<TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TargetFrameworks);uap10.0.16299;</TargetFrameworks>
 		<AssemblyName>ZXing.Net.Mobile.Forms</AssemblyName>
 		<RootNamespace>ZXing.Net.Mobile.Forms</RootNamespace>
@@ -93,8 +93,22 @@
 		<Compile Include="**\*.tizen.cs" />
 		<Compile Include="**\*.tizen.*.cs" />
 	</ItemGroup>
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('net461')) ">
+		<PackageReference Include="Xamarin.Forms.Platform.GTK" Version="4.5.0.356" />
+                <Reference Include="glib-sharp">
+                  <HintPath>..\ZXing.Net.Mobile\GTK\Libs\gtk-sharp\gtk-sharp-2.0\glib-sharp.dll</HintPath>
+                </Reference>
+                <Reference Include="gtk-sharp">
+                  <HintPath>..\ZXing.Net.Mobile\GTK\Libs\gtk-sharp\gtk-sharp-2.0\gtk-sharp.dll</HintPath>
+                </Reference>
+                <Reference Include="gdk-sharp">
+                  <HintPath>..\ZXing.Net.Mobile\GTK\Libs\gtk-sharp\gtk-sharp-2.0\gdk-sharp.dll</HintPath>
+                </Reference>
+		<Compile Include="**\*.gtk.cs" />
+		<Compile Include="**\*.gtk.*.cs" />
+	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
+		<PackageReference Include="DotNetEssentials" Version="1.5.9999--date20200916-1021.git-1e3232b" />
 		<PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
 	</ItemGroup>
 	<ItemGroup>

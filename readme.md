@@ -87,6 +87,14 @@ In your `AppDelegate`'s `FinishedLaunching (..)` implementation, call:
 ZXing.Net.Mobile.Forms.MacOS.Platform.Init();
 ```
 
+##### GTK
+
+In your `MainClass`'s `Main (..)` implementation, call:
+
+```csharp
+ZXing.Net.Mobile.Forms.GTK.Platform.Init();
+```
+
 
 ### Features
 - Xamarin.iOS
@@ -94,6 +102,7 @@ ZXing.Net.Mobile.Forms.MacOS.Platform.Init();
 - Tizen
 - UWP
 - Xamarin.Mac (rendering only, not scanning)
+- GTK# (rendering only, not scanning)
 - Simple API - Scan in as little as 2 lines of code!
 - Scanner as a View - UIView (iOS) / Fragment (Android) / Control (WP)
 

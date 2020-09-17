@@ -160,8 +160,8 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.9</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Essentials">
-      <Version>1.5.1</Version>
+    <PackageReference Include="DotNetEssentials">
+      <Version>1.5.9999--date20200916-1021.git-1e3232b</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

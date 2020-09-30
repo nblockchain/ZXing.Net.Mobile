@@ -126,7 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
-    <PackageReference Include="DotNetEssentials" Version="1.5.9999--date20200916-1021.git-1e3232b" />
+    <PackageReference Include="DotNetEssentials" Version="1.5.9999--date20200930-1228.git-65adc40" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\ZXing.Net.Mobile.Forms\ZXing.Net.Mobile.Forms.csproj">
